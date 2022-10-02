@@ -1,2 +1,2 @@
-# 2022CompetitionCode
-The code for FRC team 2199's competition robot.
+# 2023PumpkinSmasher
+The code for 2199's new swerve drive Pumpkin Smasher robot.
