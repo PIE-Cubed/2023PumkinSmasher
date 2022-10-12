@@ -111,24 +111,24 @@ public class Drive {
      * An enum containing each wheel's properties including: drive and rotate motor IDs, drive motor types, and rotate sensor IDs
      */ 
     public enum WheelProperties {
-        FRONT_RIGHT_WHEEL(7, // DRIVE MOTOR ID
-                        6, // ROTATE MOTOR ID
-                        0, // ROTATE SENSOR ID
+        FRONT_RIGHT_WHEEL(11, // DRIVE MOTOR ID
+                        10,   // ROTATE MOTOR ID
+                        1,    // ROTATE SENSOR ID
                         (-1 * rotateMotorAngleRad), // ROTATE MOTOR TARGET ANGLE (IN RADIANS)
                         FR_OFFSET), //Offset
-        FRONT_LEFT_WHEEL(5, // DRIVE MOTOR ID
-                        4, // ROTATE MOTOR ID
-                        1, // ROTATE SENSOR ID
+        FRONT_LEFT_WHEEL(9, // DRIVE MOTOR ID
+                        8,  // ROTATE MOTOR ID
+                        0,  // ROTATE SENSOR ID
                         (-1 * rotateMotorAngleRad - (Math.PI/2)), // ROTATE MOTOR TARGET ANGLE (IN RADIANS)
                         FL_OFFSET), //Offset
-        REAR_RIGHT_WHEEL(9, // DRIVE MOTOR ID
-                        8, // ROTATE MOTOR ID
-                        2, // ROTATE SENSOR ID
+        REAR_RIGHT_WHEEL(5, // DRIVE MOTOR ID
+                        4,  // ROTATE MOTOR ID
+                        3,  // ROTATE SENSOR ID
                         (-1 * rotateMotorAngleRad + (Math.PI/2)), // ROTATE MOTOR TARGET ANGLE (IN RADIANS)
                         BR_OFFSET), //Offset
-        REAR_LEFT_WHEEL(11, // DRIVE MOTOR ID
-                        10, // ROTATE MOTOR ID
-                        3, // ROTATE SENSOR ID
+        REAR_LEFT_WHEEL(7, // DRIVE MOTOR ID
+                        6, // ROTATE MOTOR ID
+                        2, // ROTATE SENSOR ID
                         (-1 * rotateMotorAngleRad + (Math.PI)), // ROTATE MOTOR TARGET ANGLE (IN RADIANS)
                         BL_OFFSET); //Offset
 
@@ -188,8 +188,8 @@ public class Drive {
      * Note: these fields are static because they must be. They are referenced in the enum, which is in and of itself, static.
      * These measurements are in inches
      */
-    private static final double robotLength = 30.125;
-    private static final double robotWidth  = 18.0;
+    private static final double robotLength = 30.0 + 1.0/16.0;
+    private static final double robotWidth  = 17.0 + 7.0/8.0;
     private static final double rotateMotorAngleRad = Math.atan2(robotLength, robotWidth);
     private static final double rotateMotorAngleDeg = Math.toDegrees(rotateMotorAngleRad);
  
