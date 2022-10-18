@@ -12,8 +12,8 @@ public class Hammer {
     }
 
 
-    public void smash(double power)     {
-        hammerMotor.set(power);
+    public void movement(double leftPower, double rightPower)     {
+        hammerMotor.set(rightPower-leftPower);
     }
 
 }

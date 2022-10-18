@@ -178,7 +178,12 @@ public class Robot extends TimedRobot {
     // Manual driving
     drive.teleopSwerve(driveX, driveY, driveZ, false, true);
   }
-
+  
+  public void hammerControl() {
+    double rightPower = controls.smashHammer();
+    double leftPower = controls.retractHammer();
+    hammer.movement(leftPower, rightPower);
+  }
 }
 
 //End of the Robot class

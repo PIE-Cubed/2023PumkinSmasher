@@ -146,12 +146,24 @@ public class Controls {
         return xboxController.getAButtonPressed();
     }
 
-    // Right Trigger for Hammer
+    /**
+     * Right Trigger for Hammer
+     * @return Right Trigger Power
+     */
     public double smashHammer() {
         double rightTrigger;
-        rightTrigger = xbox.getRightTriggerAxis();
+        rightTrigger = xboxController.getRightTriggerAxis();
         return rightTrigger;
-        }
+    }
+    
+    /**
+     * Left Trigger for Hammer
+     * @return Left Trigger Power
+     */
+    public double retractHammer() {
+        double leftTrigger;
+        leftTrigger = xboxController.getLeftTriggerAxis();
+        return leftTrigger;
     }
 }
 
