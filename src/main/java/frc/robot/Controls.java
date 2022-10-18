@@ -146,6 +146,13 @@ public class Controls {
         return xboxController.getAButtonPressed();
     }
 
+    // Right Trigger for Hammer
+    public double smashHammer() {
+        double rightTrigger;
+        rightTrigger = xbox.getRightTriggerAxis();
+        return rightTrigger;
+        }
+    }
 }
 
 // End of the Controls class

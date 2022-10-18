@@ -21,6 +21,7 @@ public class Robot extends TimedRobot {
   // Object creation
   Drive                   drive;
   Controls                controls;
+  private Hammer          hammer;
 
   // Variables
   //
@@ -46,6 +47,7 @@ public class Robot extends TimedRobot {
     //Instance Creation
     drive         = new Drive();
     controls      = new Controls();
+    hammer        = new Hammer();
   }
 
   @Override
