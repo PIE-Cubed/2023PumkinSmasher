@@ -121,6 +121,7 @@ public class Robot extends TimedRobot {
    */
   public void teleopPeriodic() {
     wheelControl();
+    hammerControl();
   }
 
   @Override
@@ -155,7 +156,7 @@ public class Robot extends TimedRobot {
    * Runs constantly during test
    */
   public void testPeriodic() {
-    //
+    drive.testWheelAngle();
   }
 
   /**
@@ -180,8 +181,11 @@ public class Robot extends TimedRobot {
   }
   
   public void hammerControl() {
-    double rightPower = controls.smashHammer();
-    double leftPower = controls.retractHammer();
+    // Inputs
+    double leftPower  = controls.retractHammer();
+    double rightPower = controls.smashHammer() / 2;
+    
+    // SMASH!
     hammer.movement(leftPower, rightPower);
   }
 }
