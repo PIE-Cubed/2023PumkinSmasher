@@ -21,6 +21,7 @@ public class Robot extends TimedRobot {
   // Object creation
   Drive                   drive;
   Controls                controls;
+  private Hammer          hammer;
 
   // Variables
   //
@@ -46,6 +47,7 @@ public class Robot extends TimedRobot {
     //Instance Creation
     drive         = new Drive();
     controls      = new Controls();
+    hammer        = new Hammer();
   }
 
   @Override
@@ -119,6 +121,7 @@ public class Robot extends TimedRobot {
    */
   public void teleopPeriodic() {
     wheelControl();
+    hammerControl();
   }
 
   @Override
@@ -153,7 +156,7 @@ public class Robot extends TimedRobot {
    * Runs constantly during test
    */
   public void testPeriodic() {
-    //
+    drive.testWheelAngle();
   }
 
   /**
@@ -176,7 +179,15 @@ public class Robot extends TimedRobot {
     // Manual driving
     drive.teleopSwerve(driveX, driveY, driveZ, false, true);
   }
-
+  
+  public void hammerControl() {
+    // Inputs
+    double leftPower  = controls.retractHammer();
+    double rightPower = controls.smashHammer() / 2;
+    
+    // SMASH!
+    hammer.movement(leftPower, rightPower);
+  }
 }
 
 //End of the Robot class

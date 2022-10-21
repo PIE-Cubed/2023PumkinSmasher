@@ -73,10 +73,10 @@ public class Drive {
     private final double ticksPerFoot     = 5.65;
 
     //BLUE ROBOT
-    private static final double FL_OFFSET = 309.8;
-    private static final double FR_OFFSET = 248.0;
-    private static final double BL_OFFSET = 165.7;
-    private static final double BR_OFFSET = -33.2;
+    private static final double FL_OFFSET = -41.77;
+    private static final double FR_OFFSET = -111.19;
+    private static final double BL_OFFSET = -101.45;
+    private static final double BR_OFFSET =  116.63;
 
     /**
      * Enumerators
@@ -636,7 +636,7 @@ public class Drive {
 
     public void testWheelAngle() {
         //Use this to calibrate wheel angle sensors
-        //Offset in wheel constructor should be the returned value * -1
+        //Offset in wheel constructor should be the returned value
         System.out.println("FL Offset: " + -frontLeftWheel.testWheelAngle());
         System.out.println("FR Offset: " + -frontRightWheel.testWheelAngle());
         System.out.println("RL Offset: " + -rearLeftWheel.testWheelAngle());
