@@ -70,7 +70,7 @@ public class Drive {
     private double  autoSwerveStartAngle = 0;
     
     //CONSTANTS
-    private final double ticksPerFoot           = 5.65;
+    private final double ticksPerFoot     = 5.65;
 
     //BLUE ROBOT
     private static final double FL_OFFSET = 309.8;
