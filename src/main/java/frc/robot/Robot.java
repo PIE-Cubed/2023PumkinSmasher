@@ -168,6 +168,8 @@ public class Robot extends TimedRobot {
     double driveY = controls.getDriveY();
     double driveZ = controls.getRotatePower();
 
+    boolean encircle = controls.encircle();
+
     // Kills all automatic funcitons (Start on the Xbox controller)
     boolean autokill            = controls.autoKill();
 
@@ -177,7 +179,12 @@ public class Robot extends TimedRobot {
     } 
 
     // Manual driving
-    drive.teleopSwerve(driveX, driveY, driveZ, false, true);
+    if (encircle) {
+      drive.circle(3);
+    }
+    else {
+      drive.teleopSwerve(driveX, driveY, driveZ, false, true);
+    }
   }
   
   public void hammerControl() {

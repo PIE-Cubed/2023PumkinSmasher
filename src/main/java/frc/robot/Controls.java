@@ -123,7 +123,11 @@ public class Controls {
     }
 
     public boolean toggleFieldDrive() {
-        return joystick.getRawButton(10);
+        return joystick.getRawButtonPressed(10);
+    }
+
+    public boolean encircle() {
+        return joystick.getRawButton(7);
     }
 
     /**
