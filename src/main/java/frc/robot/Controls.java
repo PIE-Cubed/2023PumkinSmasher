@@ -163,7 +163,7 @@ public class Controls {
     public double retractHammer() {
         double leftTrigger;
         leftTrigger = xboxController.getLeftTriggerAxis();
-        return leftTrigger;
+        return 0.10 * leftTrigger;
     }
 }
 
